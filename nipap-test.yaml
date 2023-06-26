@@ -1,10 +1,11 @@
+---
 apiVersion: v1
 kind: Pod
 metadata:
   name: nipap-deployment
   labels:
-        app: nipap-deployemnt
-spec:  
+    app: nipap-deployemnt
+spec:
   containers:
     - name: nipap-container
       image: nipap/nipapd:master
