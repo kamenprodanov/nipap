@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nipap-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nipap
+  template:
+    metadata:
+      labels:
+        app: nipap
+    spec:
+      containers:
+        - name: nipap-container
+          image: nipap/nipapd:master
+          ports:
+            - containerPort: 80  # Adjust the port if needed
