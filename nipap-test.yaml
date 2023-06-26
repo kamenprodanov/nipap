@@ -1,13 +1,12 @@
----
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nipap-deployment
+  name: nodeapp
   labels:
-    app: nipap-deployemnt
+    app: nodeapp
 spec:
   containers:
-    - name: nipap-container
+    - name: nodeapp
       image: nipap/nipapd:master
       ports:
-        - containerPort: 80
+        - containerPort: 8080        
